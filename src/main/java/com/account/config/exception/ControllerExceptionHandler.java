@@ -30,6 +30,13 @@ public class ControllerExceptionHandler {
         appException.setPath(request.getRequestURI());
         return new ResponseEntity<>(appException, HttpStatus.valueOf(appException.getStatus()));
     }
+    @ExceptionHandler(ResourceNotFoundException.class)
+    @ResponseStatus(HttpStatus.NOT_FOUND)
+    public ResponseEntity<CustomException> handleResourceNotFoundException(ResourceNotFoundException e, HttpServletRequest request) {
+        CustomException appException= new CustomException(404, e.getMessage());
+        appException.setPath(request.getRequestURI());
+        return new ResponseEntity<>(appException, HttpStatus.valueOf(appException.getStatus()));
+    }
 
     @ExceptionHandler(Exception.class) // Catch Các trường hợp còn lại
     public ResponseEntity<CustomException> catchExceptionGlobal(Exception exception, HttpServletRequest request){
