@@ -20,7 +20,6 @@ public class AccountDto extends RepresentationModel<AccountDto> {
 
     private String name;
 
-    @Email
     private String email;
 
     private String level;

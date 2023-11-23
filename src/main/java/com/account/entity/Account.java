@@ -1,11 +1,7 @@
 package com.account.entity;
 
 import jakarta.persistence.*;
-import jakarta.validation.constraints.Email;
-import jakarta.validation.constraints.Positive;
 import lombok.Data;
-import lombok.Getter;
-import lombok.Setter;
 
 @Data
 @Entity
@@ -19,7 +15,7 @@ public class Account {
     @Column(name = "name", nullable = false)
     private String name;
 
-    @Column(name = "email", unique = true, nullable = false)
+    @Column(name = "email",unique = true, nullable = false)
     private String email;
 
     @Column(name = "level", nullable = false)
