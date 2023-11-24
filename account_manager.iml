@@ -145,4 +145,7 @@
     <orderEntry type="library" name="Maven: org.hibernate.validator:hibernate-validator:8.0.1.Final" level="project" />
     <orderEntry type="library" name="Maven: jakarta.validation:jakarta.validation-api:3.0.2" level="project" />
   </component>
+  <component name="SonarLintModuleSettings">
+    <option name="uniqueId" value="a496dfca-cd2a-4a81-84cd-4db113a937b1" />
+  </component>
 </module>
