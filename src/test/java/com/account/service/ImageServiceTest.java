@@ -1,5 +1,6 @@
 package com.account.service;
 
+import com.account.util.ImageUtil;
 import org.apache.commons.io.IOUtils;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -15,9 +16,6 @@ import java.util.Objects;
 @ExtendWith(MockitoExtension.class)
 class ImageServiceTest {
 
-
-    private final ImageService imageService = new ImageService();
-
     private String inputFilePath = "test-image.jpg";
 
     @Test
@@ -31,7 +29,7 @@ class ImageServiceTest {
                 inputFile.getName(), "jpg", IOUtils.toByteArray(input));
 
 
-        String a = imageService.parseToBase64(multipartFile);
+        String a = ImageUtil.parseToBase64(multipartFile);
         System.out.println(a);
     }
 }

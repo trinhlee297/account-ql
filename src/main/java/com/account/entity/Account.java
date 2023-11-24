@@ -23,11 +23,6 @@ public class Account {
     @Column(name = "level", nullable = false)
     private String level;
 
-    @Column(name = "avatar", nullable = false)
+    @Column(name = "avatar")
     private String avatar;
-
-    @OneToMany(mappedBy = "account")
-
-    private List<AccountImage> accountImages;
-
 }
