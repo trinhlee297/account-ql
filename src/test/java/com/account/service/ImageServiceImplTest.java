@@ -14,7 +14,7 @@ import java.io.FileInputStream;
 import java.util.Objects;
 
 @ExtendWith(MockitoExtension.class)
-class ImageServiceTest {
+class ImageServiceImplTest {
 
     private String inputFilePath = "test-image.jpg";
 
